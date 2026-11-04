@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+
+<!-- Open Graph Meta Tags -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sanketsaini07.github.io/Demo/">
+<meta property="og:title" content="Simran & Nitish | Wedding Invitation">
+<meta property="og:description" content="Two hearts, two families, and one beautiful beginning. Join us in celebrating our wedding on 11 December 2026.">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/SanketSaini07/Demo@main/Gemini_Generated_Image_bpdelgbpdelgbpde.png">
+
+<!-- Twitter Card Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Simran & Nitish | Wedding Invitation">
+<meta name="twitter:description" content="Two hearts, two families, and one beautiful beginning. Join us in celebrating our wedding on 11 December 2026.">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/SanketSaini07/Demo@main/Gemini_Generated_Image_bpdelgbpdelgbpde.png">
+	
+<title>Simran & Nitish | Royal Wedding Invitation</title>
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --royal-burgundy: #3b0c19;
+  --deep-wine: #24050d;
+  --rose-gold: #e2c08a;
+  --rose-gold-light: #f7ebd7;
+  --blush-cream: #faf5eb;
+  --text-dark: #3a2e31;
+  --text-muted: #78666b;
+  --accent-gold: #c5a059;
+  --card-bg: rgba(255, 253, 248, 0.96);
+  --shadow-color: rgba(59, 12, 25, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Cormorant Garamond', serif;
+  color: var(--text-dark);
+  background: #110206; /* Pure dark base for first page */
+  overflow-x: hidden;
+  width: 100%;
+}
+
+button { cursor: pointer; }
+
+/* =========================
+   VIDEO COVER & SMOOTH TRANSITION
+========================= */
+
+.envelope {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: #110206;
+  overflow: hidden;
+  transition: opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1), transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.cover-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.envelope.opening {
+  opacity: 0;
+  transform: scale(1.15);
+  pointer-events: none;
+}
+
+.video-tap-trigger {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  z-index: 10;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+/* =========================
+   CONTAINER & CARDS
+========================= */
+
+#invitation {
+  display: none;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+}
+
+#invitation.show {
+  display: block;
+  animation: fadeIn 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+section {
+  position: relative;
+  width: 100%;
+  max-width: 100vw;
+  box-sizing: border-box;
+}
+
+.paper-card {
+  background: var(--card-bg);
+  border: 1px solid rgba(226, 192, 138, 0.6);
+  border-radius: 14px;
+  box-shadow: 0 18px 40px var(--shadow-color);
+  position: relative;
+}
+
+.paper-card::after {
+  content: "";
+  position: absolute;
+  inset: 12px;
+  border: 1px dashed rgba(226, 192, 138, 0.45);
+  pointer-events: none;
+  border-radius: 9px;
+}
+
+/* =========================
+   GANESHA SECTION (First Page Only: Pure ganeshbackground.jpg)
+========================= */
+
+.ganesha-section {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  background: #110206;
+}
+
+.ganesha-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+}
+
+.ganesha-content {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  max-width: 520px;
+  padding: 30px 20px 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* =========================
+   SECTIONS FROM SECOND PAGE ONWARDS (background.jpg active)
+========================= */
+
+.subsequent-pages-wrapper {
+  background: #140409 url("https://github.com/SanketSaini07/Demo/raw/main/background.jpg") repeat center top;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+  min-height: 100svh;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgba(17, 2, 6, 0.4);
+  backdrop-filter: blur(2px);
+}
+
+.hero-card {
+  max-width: 650px;
+  width: 100%;
+  padding: 45px 30px;
+}
+
+.royal-name-text {
+  background: linear-gradient(135deg, #1f422e 0%, #0d291c 40%, #856127 70%, #3b0c19 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 10px rgba(197, 160, 89, 0.15);
+}
+
+.script-names {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(60px, 12vw, 95px);
+  line-height: 1.05;
+  padding-top: 10px;
+  word-wrap: break-word;
+}
+
+.parent-line {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(16px, 2.8vw, 18px);
+  font-style: italic;
+  color: var(--text-muted);
+  margin-top: -2px;
+  margin-bottom: 6px;
+}
+
+.ampersand {
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  color: var(--accent-gold);
+  font-size: clamp(30px, 5vw, 42px);
+  margin: 2px 0;
+  display: block;
+}
+
+.hero-message {
+  font-size: clamp(17px, 3.5vw, 21px);
+  line-height: 1.6;
+  margin: 18px auto;
+  max-width: 480px;
+  color: var(--text-dark);
+}
+
+/* =========================
+   SCROLL SLIDER PILL
+========================= */
+
+.scroll-indicator {
+  margin-top: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(226, 192, 138, 0.7);
+  color: var(--royal-burgundy);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.scroll-indicator:hover {
+  background: var(--royal-burgundy);
+  color: var(--rose-gold);
+}
+
+.chevron-down {
+  animation: bounceDown 1.8s infinite;
+}
+
+@keyframes bounceDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(4px); }
+}
+
+/* =========================
+   SCRATCH CARD SECTION
+========================= */
+
+.scratch-section {
+  padding: 80px 20px;
+  text-align: center;
+  background: rgba(17, 2, 6, 0.5);
+}
+
+.section-script {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(34px, 8vw, 50px);
+  color: var(--rose-gold);
+  margin-bottom: 10px;
+  line-height: 1.1;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+.section-description {
+  font-size: clamp(17px, 3.5vw, 20px);
+  color: var(--rose-gold-light);
+  margin-bottom: 30px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.scratch-card-wrapper {
+  width: min(360px, 90vw);
+  height: 340px;
+  position: relative;
+  margin: 0 auto 25px;
+  border-radius: 14px;
+  overflow: visible;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
+  background: #fff;
+  border: 2px solid var(--rose-gold);
+  transition: transform 0.4s ease;
+}
+
+.scratch-card-wrapper.celebrate {
+  animation: celebrateBounce 0.6s ease;
+}
+
+@keyframes celebrateBounce {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); box-shadow: 0 0 30px rgba(212, 175, 55, 0.7); }
+}
+
+.scratch-message {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  background: radial-gradient(circle, #fffdf9 0%, #f9f1e6 100%);
+  color: var(--royal-burgundy);
+  border-radius: 12px;
+}
+
+.scratch-message .invite-tag {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  margin-bottom: 15px;
+}
+
+.date-pills-row {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0 15px;
+}
+
+.date-pill {
+  background: rgba(59, 12, 25, 0.04);
+  border: 1px solid rgba(226, 192, 138, 0.6);
+  border-radius: 12px;
+  padding: 14px 14px;
+  min-width: 80px;
+  text-align: center;
+  box-shadow: inset 0 0 10px rgba(59, 12, 25, 0.02);
+}
+
+.date-pill strong {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(22px, 5vw, 26px);
+  color: var(--royal-burgundy);
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.date-pill span {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 8px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 6px;
+  display: block;
+}
+
+.scratch-message .venue-subtext {
+  font-size: 15px;
+  font-style: italic;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+#scratchCanvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+  cursor: crosshair;
+  z-index: 5;
+  border-radius: 12px;
+}
+
+.confetti-particle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 22px;
+  pointer-events: none;
+  animation: burstConfetti 1s ease-out forwards;
+  z-index: 20;
+}
+
+@keyframes burstConfetti {
+  0% { transform: translate(-50%, -50%) scale(0.5); opacity: 1; }
+  100% { transform: translate(var(--dx), var(--dy)) scale(1.3) rotate(360deg); opacity: 0; }
+}
+
+/* =========================
+   CONTINUOUS FULL PAGE EVENT TEMPLATES
+========================= */
+
+.events-section {
+  padding: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.events-section-header {
+  padding: 60px 20px 30px;
+  background: rgba(17, 2, 6, 0.5);
+}
+
+.events-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.template-event-card {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  min-height: 100svh;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid rgba(226, 192, 138, 0.4);
+}
+
+.template-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 1;
+}
+
+.template-content {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 8% 30% 8%;
+  text-align: center;
+  pointer-events: none;
+}
+
+.template-content > * {
+  pointer-events: auto;
+}
+
+.template-info-box {
+  background: rgba(255, 253, 248, 0.90);
+  border: 1px solid rgba(226, 192, 138, 0.9);
+  border-radius: 14px;
+  padding: 12px 18px;
+  width: 100%;
+  max-width: 320px;
+  box-shadow: 0 8px 25px rgba(36, 5, 13, 0.25);
+  backdrop-filter: blur(8px);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+}
+
+.template-date-badge {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(10px, 2.5vw, 12px);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  font-weight: 600;
+}
+
+.template-time {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(18px, 4.2vw, 22px);
+  font-weight: 700;
+  font-style: italic;
+  color: var(--royal-burgundy);
+  line-height: 1.2;
+}
+
+.template-venue {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(10px, 2.4vw, 11px);
+  line-height: 1.4;
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+/* Falling Petals Animation */
+.falling-petal {
+  position: absolute;
+  top: -25px;
+  pointer-events: none;
+  font-size: 20px;
+  opacity: 0.85;
+  z-index: 4;
+  animation: floatFall 4.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes floatFall {
+  0% { transform: translateY(0) rotate(0deg) translateX(0); opacity: 0.9; }
+  50% { transform: translateY(220px) rotate(180deg) translateX(15px); opacity: 0.7; }
+  100% { transform: translateY(480px) rotate(360deg) translateX(-10px); opacity: 0; }
+}
+
+/* =========================
+   COUNTDOWN & VENUE
+========================= */
+
+.countdown-section {
+  padding: 80px 20px;
+  text-align: center;
+  background: rgba(17, 2, 6, 0.4);
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 30px auto 20px;
+  max-width: 550px;
+}
+
+.countdown-box {
+  flex: 1;
+  min-width: 75px;
+  max-width: 110px;
+  padding: 16px 10px;
+  border: 1px solid var(--rose-gold);
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.countdown-box strong {
+  display: block;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(28px, 6vw, 36px);
+  color: var(--royal-burgundy);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.countdown-box span {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-top: 4px;
+  display: block;
+}
+
+.venue-section {
+  padding: 80px 20px;
+  text-align: center;
+  background: rgba(17, 2, 6, 0.4);
+}
+
+.venue-card {
+  max-width: 650px;
+  margin: 30px auto 0;
+  padding: 35px 25px;
+}
+
+.button {
+  background: var(--royal-burgundy);
+  color: var(--rose-gold);
+  border: 1px solid var(--rose-gold);
+  border-radius: 50px;
+  padding: 14px 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  box-shadow: 0 8px 20px rgba(59, 12, 25, 0.2);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: var(--deep-wine);
+  transform: translateY(-2px);
+  color: #fff;
+}
+
+.closing {
+  padding: 90px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, rgba(36, 5, 13, 0.9) 0%, rgba(59, 12, 25, 0.95) 100%);
+  color: var(--blush-cream);
+}
+
+.closing h2 {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(48px, 9vw, 80px);
+  color: var(--rose-gold);
+  margin: 15px 0 20px;
+}
+
+.tap-indicator {
+  position: absolute;
+  z-index: 5;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--rose-gold);
+  background: rgba(59, 12, 25, 0.75);
+  border: 1px solid var(--rose-gold);
+  padding: 8px 16px;
+  border-radius: 30px;
+  pointer-events: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  animation: pulseTap 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes pulseTap {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(1.08); opacity: 1; }
+}
+
+.closing-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: var(--rose-gold);
+  background: #0d0205;
+}
+</style>
+</head>
+
+<body>
+
+<!-- VIDEO COVER OVERLAY -->
+<section class="envelope" id="envelope">
+  <video id="coverVideo" class="cover-video" muted playsinline preload="auto">
+    <source src="https://github.com/SanketSaini07/Demo/raw/main/VID-20261103-WA0017.mp4" type="video/mp4">
+  </video>
+  <div class="tap-indicator">Tap to Open</div>
+  <button class="video-tap-trigger" id="videoTriggerBtn" aria-label="Open Invitation"></button>
+</section>
+
+<!-- Audio Tag linked directly to raw GitHub file -->
+<audio id="weddingMusic" loop preload="auto">
+  <source src="https://github.com/SanketSaini07/Demo/raw/main/AUD-20261103-WA0018.mp3" type="audio/mpeg">
+</audio>
+
+<!-- MAIN INVITATION CONTENT -->
+<main id="invitation">
+
+  <!-- FIRST PAGE: Pure Ganesha Background with Zero background.jpg interference -->
+  <section class="ganesha-section" id="ganeshaSection">
+    <img src="https://github.com/SanketSaini07/Demo/raw/main/ganeshbackground.jpg" alt="Lord Ganesha Background" class="ganesha-bg">
+    <div class="ganesha-content">
+      <div>
+        <a href="#heroSection" class="scroll-indicator">
+          <span>Slide to Invitation</span>
+          <span class="chevron-down">↓</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUBSEQUENT PAGES WRAPPER (background.jpg activates here onwards) -->
+  <div class="subsequent-pages-wrapper">
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="heroSection">
+      <div class="hero-card paper-card">
+        <p class="hero-message">
+          We are honored to welcome you to the Wedding ceremony of 
+        </p>
+	  
+        <h1 class="script-names royal-name-text">Simran</h1>
+        <div class="parent-line">(D/o Smt. Poonam Saini &amp; Sh. Subhash Saini)</div>
+
+        <span class="ampersand">&amp;</span>
+      
+        <h1 class="script-names royal-name-text">Nitish</h1>
+        <div class="parent-line">(S/o Smt. Kiran Saini &amp; Sh. Subhash Chand)</div>
+      
+        <p class="hero-message">
+          As they begin their journey together in faith and love, we thank you for being part of this blessed occasion 
+        </p>
+	  
+        <div>
+          <a href="#scratchSection" class="scroll-indicator">
+            <span>Slide to Surprise</span>
+            <span class="chevron-down">↓</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCRATCH CARD -->
+    <section class="scratch-section" id="scratchSection">
+      <h2 class="section-script">Their Journey Begins</h2>
+      <p class="section-description">
+        ✦ Scratch to reveal the date ✦
+      </p>
+
+      <div class="scratch-card-wrapper" id="scratchCardWrapper">
+        <div class="scratch-message">
+          <span class="invite-tag">You're Cordially Invited</span>
+        
+          <div class="date-pills-row">
+            <div class="date-pill">
+              <strong>11</strong>
+              <span>DAY</span>
+            </div>
+            <div class="date-pill">
+              <strong>December</strong>
+              <span>MONTH</span>
+            </div>
+            <div class="date-pill">
+              <strong>2026</strong>
+              <span>YEAR</span>
+            </div>
+          </div>
+
+          <div class="venue-subtext">Friday, at 10:00 AM • Karnal</div>
+        </div>
+        <canvas id="scratchCanvas"></canvas>
+      </div>
+
+      <button class="button" onclick="revealDate()">✦ REVEAL DATE ✦</button>
+
+      <div>
+        <a href="#events" class="scroll-indicator">
+          <span>View Timeline</span>
+          <span class="chevron-down">↓</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- CONTINUOUS FULL-SCREEN EVENT TEMPLATES -->
+    <section class="events-section" id="events">
+      <div class="events-section-header">
+        <div class="section-eyebrow" style="color: var(--rose-gold);">Program Timeline</div>
+        <h2 class="section-script">Celebration Festivities</h2>
+      </div>
+
+      <div class="events-container">
+
+        <!-- 1. HALDI TEMPLATE CARD -->
+        <article class="template-event-card">
+          <img src="https://github.com/SanketSaini07/Demo/raw/main/Haldi.jpg" alt="Haldi Ceremony" class="template-bg">
+          <div class="template-content">
+            <div class="template-info-box">
+              <div class="template-date-badge">Wednesday, 9 Dec 2026</div>
+              <div class="template-time">02:00 PM Onwards</div>
+              <div class="template-venue">H. No. 132-B, Gupta Colony, Taraori (Karnal)</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 2. MEHNDI TEMPLATE CARD -->
+        <article class="template-event-card">
+          <img src="https://github.com/SanketSaini07/Demo/raw/main/Mehndi.jpg" alt="Mehndi Ceremony" class="template-bg">
+          <div class="template-content">
+            <div class="template-info-box">
+              <div class="template-date-badge">Thursday, 10 Dec 2026</div>
+              <div class="template-time">10:00 AM Onwards</div>
+              <div class="template-venue">H. No. 132-B, Gupta Colony, Taraori (Karnal)</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 3. SANGEET TEMPLATE CARD -->
+        <article class="template-event-card">
+          <img src="https://github.com/SanketSaini07/Demo/raw/main/Sangeet.jpg" alt="Sangeet Sandhya" class="template-bg">
+          <div class="template-content">
+            <div class="template-info-box">
+              <div class="template-date-badge">Thursday, 10 Dec 2026</div>
+              <div class="template-time">06:30 PM Onwards</div>
+              <div class="template-venue">H. No. 132-B, Gupta Colony, Taraori (Karnal)</div>
+            </div>
+          </div>
+        </article>
+
+        <!-- 4. WEDDING TEMPLATE CARD -->
+        <article class="template-event-card">
+          <img src="https://github.com/SanketSaini07/Demo/raw/main/Wedding.jpg" alt="Shubh Vivah" class="template-bg">
+          <div class="template-content">
+            <div class="template-info-box">
+              <div class="template-date-badge">Friday, 11 Dec 2026</div>
+              <div class="template-time">Baraat: 10:00 AM | Lunch: 01:00 PM | Vidaai: 06:00 PM</div>
+              <div class="template-venue">The Vivaan Hotel &amp; Resorts, Karnal</div>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <div style="padding: 40px 20px; background: rgba(17, 2, 6, 0.4);">
+        <a href="#countdownSection" class="scroll-indicator">
+          <span>Slide to Countdown</span>
+          <span class="chevron-down">↓</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- COUNTDOWN -->
+    <section class="countdown-section" id="countdownSection">
+      <div class="section-eyebrow" style="color: var(--rose-gold);">The Countdown Begins</div>
+      <h2 class="section-script">Waiting for the Big Day Together</h2>
+    
+      <div class="countdown">
+        <div class="countdown-box"><strong id="days">00</strong><span>Days</span></div>
+        <div class="countdown-box"><strong id="hours">00</strong><span>Hours</span></div>
+        <div class="countdown-box"><strong id="minutes">00</strong><span>Minutes</span></div>
+        <div class="countdown-box"><strong id="seconds">00</strong><span>Seconds</span></div>
+      </div>
+    </section>
+
+    <!-- VENUE LOCATION -->
+    <section class="venue-section">
+      <div class="section-eyebrow" style="color: var(--rose-gold);">Location</div>
+      <h2 class="section-script">Celebration Venue</h2>
+    
+      <div class="venue-card paper-card">
+        <h3>The Vivaan Hotel &amp; Resorts</h3>
+        <p style="margin: 10px 0 20px; color: var(--text-muted); font-size: 19px;">
+          G.T. Road, Karnal, Haryana
+        </p>
+        <a href="https://maps.google.com/?q=The+Vivaan+Hotels+Resorts+Karnal" target="_blank" class="button">
+          📍 MAP LOCATION
+        </a>
+      </div>
+    </section>
+
+    <!-- CLOSING -->
+    <section class="closing">
+      <div class="eyebrow" style="color: var(--rose-gold);">With warm regards</div>
+      <p style="font-size: 20px; color: var(--blush-cream); margin-top: 10px;">Sanket Saini &amp; Family</p>
+    
+      <div class="closing-buttons">
+        <button class="button" onclick="saveDate()">♡ SAVE DATE</button>
+      </div>
+    </section>
+
+    <footer>MADE WITH LOVE</footer>
+
+  </div><!-- /subsequent-pages-wrapper -->
+</main>
+
+<script>
+let audioCtx = null;
+let synthPlaying = false;
+
+function playLoveStorySynth() {
+  if (synthPlaying) return;
+  try {
+    const AudioContext = window.AudioContext || window.webkitAudioContext;
+    audioCtx = new AudioContext();
+    synthPlaying = true;
+    
+    const notes = [293.66, 329.63, 349.23, 440.00, 392.00, 349.23, 329.63, 293.66];
+    let noteIdx = 0;
+
+    function playNext() {
+      if (!synthPlaying || !audioCtx) return;
+      const osc = audioCtx.createOscillator();
+      const gain = audioCtx.createGain();
+      osc.type = 'sine';
+      osc.frequency.setValueAtTime(notes[noteIdx % notes.length], audioCtx.currentTime);
+      gain.gain.setValueAtTime(0.04, audioCtx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.6);
+      osc.connect(gain);
+      gain.connect(audioCtx.destination);
+      osc.start();
+      osc.stop(audioCtx.currentTime + 0.6);
+      noteIdx++;
+      setTimeout(playNext, 650);
+    }
+    playNext();
+  } catch(e) {}
+}
+
+let isOpenTriggered = false;
+
+function openInvitation() {
+  if (isOpenTriggered) return;
+  isOpenTriggered = true;
+
+  const envelope = document.getElementById('envelope');
+  const invitation = document.getElementById('invitation');
+  const music = document.getElementById('weddingMusic');
+
+  envelope.classList.add('opening');
+  setTimeout(() => {
+    envelope.style.display = 'none';
+    invitation.classList.add('show');
+    initScratch();
+    
+    if (music) {
+      music.play().catch(() => { 
+        playLoveStorySynth(); 
+      });
+    }
+  }, 950);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const triggerBtn = document.getElementById('videoTriggerBtn');
+  const coverVideo = document.getElementById('coverVideo');
+  const tapIndicator = document.querySelector('.tap-indicator');
+  const music = document.getElementById('weddingMusic');
+
+  triggerBtn.addEventListener('click', () => {
+    triggerBtn.style.display = 'none';
+    if (tapIndicator) {
+      tapIndicator.style.display = 'none';
+    }
+
+    if (coverVideo) {
+      coverVideo.muted = false;
+      coverVideo.play().catch(() => {});
+    }
+
+    if (music) {
+      music.load();
+      music.play().catch(err => {
+        console.log("Audio play blocked or failed:", err);
+        if (typeof playLoveStorySynth === 'function') {
+          playLoveStorySynth();
+        }
+      });
+    }
+  });
+
+  if (coverVideo) {
+    coverVideo.addEventListener('ended', openInvitation);
+  }
+});
+
+const canvas = document.getElementById('scratchCanvas');
+const ctx = canvas.getContext('2d', { willReadFrequently: true });
+let scratchReady = false;
+let revealed = false;
+
+function initScratch() {
+  if (scratchReady) return;
+  const rect = canvas.getBoundingClientRect();
+  const dpr = Math.min(window.devicePixelRatio || 1, 2);
+  canvas.width = Math.round(rect.width * dpr);
+  canvas.height = Math.round(rect.height * dpr);
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+
+  const gradient = ctx.createLinearGradient(0, 0, rect.width, rect.height);
+  gradient.addColorStop(0, '#e2c08a');
+  gradient.addColorStop(0.5, '#f4e0bc');
+  gradient.addColorStop(1, '#ad8742');
+
+  ctx.fillStyle = gradient;
+  ctx.fillRect(0, 0, rect.width, rect.height);
+  ctx.globalCompositeOperation = 'destination-out';
+  scratchReady = true;
+}
+
+function erase(e) {
+  if (revealed) return;
+  const rect = canvas.getBoundingClientRect();
+  const x = e.clientX - rect.left;
+  const y = e.clientY - rect.top;
+  ctx.beginPath();
+  ctx.arc(x, y, 30, 0, Math.PI * 2);
+  ctx.fill();
+  checkScratchProgress();
+}
+
+canvas.addEventListener('pointermove', e => {
+  if (e.buttons === 1) erase(e);
+});
+canvas.addEventListener('click', e => erase(e));
+
+function checkScratchProgress() {
+  if (revealed || !scratchReady) return;
+  const data = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+  let transparent = 0;
+  let total = 0;
+
+  for (let i = 3; i < data.length; i += 64) {
+    total++;
+    if (data[i] < 35) transparent++;
+  }
+
+  if (total && (transparent / total) > 0.40) {
+    revealDate();
+  }
+}
+
+function triggerConfetti() {
+  const wrapper = document.getElementById('scratchCardWrapper');
+  wrapper.classList.add('celebrate');
+  const symbols = ['✨', '🌟', '💫', '💛', '🌸'];
+  for (let i = 0; i < 16; i++) {
+    const particle = document.createElement('span');
+    particle.className = 'confetti-particle';
+    particle.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+    const angle = Math.random() * Math.PI * 2;
+    const distance = 80 + Math.random() * 120;
+    particle.style.setProperty('--dx', `${Math.cos(angle) * distance}px`);
+    particle.style.setProperty('--dy', `${Math.sin(angle) * distance}px`);
+    wrapper.appendChild(particle);
+    setTimeout(() => particle.remove(), 1000);
+  }
+}
+
+function revealDate() {
+  if (revealed) return;
+  revealed = true;
+  triggerConfetti();
+
+  canvas.style.transition = 'opacity 0.8s ease';
+  canvas.style.opacity = '0';
+  setTimeout(() => {
+    canvas.style.display = 'none';
+  }, 800);
+}
+
+setInterval(() => {
+  const cards = document.querySelectorAll('.template-event-card');
+  if (cards.length === 0) return;
+  
+  const card = cards[Math.floor(Math.random() * cards.length)];
+  const rect = card.getBoundingClientRect();
+  
+  if (rect.top < window.innerHeight && rect.bottom > 0) {
+    const petals = ['🌸', '✿', '❀', '🌼'];
+    const flower = document.createElement('span');
+    flower.className = 'falling-petal';
+    flower.textContent = petals[Math.floor(Math.random() * petals.length)];
+    flower.style.left = (15 + Math.random() * 70) + '%';
+    card.appendChild(flower);
+    setTimeout(() => flower.remove(), 4800);
+  }
+}, 700);
+
+function updateCountdown() {
+  const target = new Date(2026, 11, 11, 10, 0, 0).getTime();
+  const diff = target - Date.now();
+  if (diff <= 0) return;
+  document.getElementById('days').textContent = String(Math.floor(diff / 86400000)).padStart(2, '0');
+  document.getElementById('hours').textContent = String(Math.floor((diff % 86400000) / 3600000)).padStart(2, '0');
+  document.getElementById('minutes').textContent = String(Math.floor((diff % 3600000) / 60000)).padStart(2, '0');
+  document.getElementById('seconds').textContent = String(Math.floor((diff % 60000) / 1000)).padStart(2, '0');
+}
+setInterval(updateCountdown, 1000);
+updateCountdown();
+
+function saveDate() {
+  const calendar = [
+    'BEGIN:VCALENDAR', 'VERSION:2.0', 'BEGIN:VEVENT',
+    'DTSTART:20261211T043000Z', 'DTEND:20261211T143000Z',
+    'SUMMARY:Simran & Nitish Wedding',
+    'LOCATION:The Vivaan Hotels & Resorts, Karnal',
+    'END:VEVENT', 'END:VCALENDAR'
+  ].join('\r\n');
+  const blob = new Blob([calendar], { type: 'text/calendar' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'Simran-Nitish-Wedding.ics';
+  a.click();
+}
+</script>
+</body>
+</html>
