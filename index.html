@@ -610,16 +610,26 @@ section {
   display: block;
 }
 
+/* FULL-PAGE VENUE SECTION */
 .venue-section {
-  padding: 80px 20px;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   background: rgba(17, 2, 6, 0.4);
+  backdrop-filter: blur(2px);
+  overflow: hidden;
 }
 
 .venue-card {
   max-width: 650px;
-  margin: 30px auto 0;
-  padding: 35px 25px;
+  width: 100%;
+  margin: 25px auto 0;
+  padding: 40px 25px;
 }
 
 .button {
@@ -647,18 +657,53 @@ section {
   color: #fff;
 }
 
+/* FULL-PAGE CLOSING SECTION */
 .closing {
-  padding: 90px 20px;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: 60px 20px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  background: linear-gradient(135deg, rgba(36, 5, 13, 0.9) 0%, rgba(59, 12, 25, 0.95) 100%);
-  color: var(--blush-cream);
+  background: rgba(17, 2, 6, 0.4);
+  backdrop-filter: blur(2px);
+  position: relative;
+  overflow: hidden;
 }
 
-.closing h2 {
-  font-family: 'Great Vibes', cursive;
-  font-size: clamp(48px, 9vw, 80px);
-  color: var(--rose-gold);
-  margin: 15px 0 20px;
+.closing-card {
+  max-width: 650px;
+  width: 100%;
+  padding: 45px 30px;
+}
+
+.closing-eyebrow {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  margin-bottom: 15px;
+}
+
+/* Matching color with venue heading (--royal-burgundy) */
+.closing-family {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(34px, 7vw, 48px);
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 10px 0 18px;
+  letter-spacing: 1px;
+  color: var(--royal-burgundy);
+}
+
+.closing-subtext {
+  font-size: clamp(17px, 3.5vw, 20px);
+  color: var(--text-muted);
+  margin-bottom: 25px;
+  line-height: 1.5;
 }
 
 .tap-indicator {
@@ -689,11 +734,15 @@ section {
   justify-content: center;
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 25px;
+  margin-top: 10px;
 }
 
 footer {
-  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 18px 20px;
   text-align: center;
   font-family: 'Montserrat', sans-serif;
   font-size: 10px;
@@ -888,14 +937,14 @@ footer {
       </div>
     </section>
 
-    <!-- VENUE LOCATION -->
-    <section class="venue-section">
+    <!-- VENUE LOCATION (Full Page) -->
+    <section class="venue-section" id="venueSection">
       <div class="section-eyebrow" style="color: var(--rose-gold);">Location</div>
       <h2 class="section-script">Celebration Venue</h2>
     
       <div class="venue-card paper-card">
-        <h3>The Vivaan Hotel &amp; Resorts</h3>
-        <p style="margin: 10px 0 20px; color: var(--text-muted); font-size: 19px;">
+        <h3 style="font-size: clamp(24px, 5vw, 30px); color: var(--royal-burgundy); font-weight: 700;">The Vivaan Hotel &amp; Resorts</h3>
+        <p style="margin: 10px 0 25px; color: var(--text-muted); font-size: 19px;">
           G.T. Road, Karnal, Haryana
         </p>
         <a href="https://maps.google.com/?q=The+Vivaan+Hotels+Resorts+Karnal" target="_blank" class="button">
@@ -904,17 +953,18 @@ footer {
       </div>
     </section>
 
-    <!-- CLOSING -->
-    <section class="closing">
-      <div class="eyebrow" style="color: var(--rose-gold);">With warm regards</div>
-      <p style="font-size: 20px; color: var(--blush-cream); margin-top: 10px;">Sanket Saini &amp; Family</p>
-    
-      <div class="closing-buttons">
-        <button class="button" onclick="saveDate()">♡ SAVE DATE</button>
+    <!-- CLOSING (Full Page Matching Other Pages) -->
+    <section class="closing" id="closingSection">
+      <div class="closing-card paper-card">
+        <div class="closing-eyebrow">With Warm Regards</div>
+        <h2 class="closing-family">Sanket Saini &amp; Family</h2>
+        <p class="closing-subtext">We look forward to celebrating this joyous occasion with you.</p>
+        <div class="closing-buttons">
+          <button class="button" onclick="saveDate()">♡ SAVE DATE</button>
+        </div>
       </div>
+      <footer>MADE WITH LOVE</footer>
     </section>
-
-    <footer>MADE WITH LOVE</footer>
 
   </div><!-- /subsequent-pages-wrapper -->
 </main>
